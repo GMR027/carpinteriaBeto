@@ -1,0 +1,89 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+  @include m.contenedor;
+
+  h2 {
+    color: v.$naranja;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  
+  &-imagenes {
+    @include m.grid(2);
+
+    @include m.telefono {
+      @include m.grid(3, 2rem)
+    }
+
+    @include m.deskop {
+      @include m.grid(4, 2rem)
+    }
+
+    img {
+      border-radius: 1rem;
+      width: auto;
+      max-height: 40rem;
+      background-size: cover;
+      cursor: pointer;
+    }
+  }
+
+}
+
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+
+  @include m.grid(1);
+  place-items: center; //Centrado horizontal y verticalmente
+
+  animation: fadeIn ease-in 0.5s;
+
+  &.fadeOut {  //clase que se agrega al modal para cerrar imagen
+    animation: fadeOut ease-in 0.5s;
+  }
+
+  img {
+    max-width: 70rem;
+  }
+}
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: v.$blanco;
+  border: none;
+  color: v.$naranja;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background-color: v.$gris;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

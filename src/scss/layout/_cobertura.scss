@@ -1,0 +1,68 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cobertura {
+  @include m.contenedor;
+  @include m.grid(1);
+
+  &-header {
+    @include m.tablet {
+      @include m.grid(2, 2rem);
+    }
+
+    img {
+      width: auto;
+      max-height: 30rem;
+      border-radius: 1rem;
+      margin: 0 auto;
+    }
+  
+    &-informacion {
+      h2 {
+        color: v.$naranja;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 2rem;
+  
+        @include m.tablet {
+          margin-top: 0;
+        }
+      }
+  
+      span {
+        font-style: italic
+      }
+    }
+  }
+
+  
+  .cobertura-footer {
+    ul {
+      @include m.tablet {
+        @include m.grid(3);
+      }
+
+      @include m.deskop {
+        @include m.grid(5);
+      }
+    }
+  }
+}
+
+
+.cobertura-iconos {
+ display: flex;
+ justify-content: space-around;
+
+  .icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+      color: v.$negroClaro;
+    }
+  }
+}

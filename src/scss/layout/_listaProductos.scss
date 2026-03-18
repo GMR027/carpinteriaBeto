@@ -1,0 +1,65 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lista {
+  @include m.contenedor;
+  @include m.grid;
+  @include m.tablet {
+    @include m.grid(2, 4rem);
+  }
+  @include m.deskop {
+    @include m.grid(4);
+  }
+}
+
+.listado {
+  @include m.flex-column;
+  border: solid 2px v.$gris;
+  border-radius: 1rem;
+  padding: 1rem;
+  img {
+    width: auto;
+    max-height: 20rem;
+    margin: 1rem auto;
+  }
+
+  &-contenido {
+    @include m.flex-column;
+  }
+
+  p {
+    margin: .2rem;
+    text-align: center;
+  }
+
+  div p:last-child {
+    color: v.$verde;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+}
+
+.informacionLista {
+  @include m.grid;
+  @include m.tablet {
+    @include m.grid(2);
+  }
+  img {
+    width: auto;
+    max-height: 40rem;
+  }
+  &-contenido {
+    @include m.tablet {
+      padding: 4rem 0;
+    }
+    div img {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

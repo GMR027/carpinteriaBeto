@@ -1,0 +1,98 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.productos {
+  
+
+  .contenedor-productos {
+    @include m.contenedor;
+
+    @include m.tablet {
+      @include m.grid(2, 2rem);
+    }
+
+    @include m.deskop {
+      @include m.grid(3, 2rem);
+    }
+  }
+
+}
+
+.contenedor-productos {
+  .producto {
+    background-color: v.$blanco;
+    border-radius: .5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @include m.tablet {
+      margin-bottom: 0;
+    }
+    
+    img {
+      border-radius: 1rem;
+    }
+
+    p {
+      text-align: center;
+      margin: 0;
+    }
+
+    button {
+      color: v.$blanco;
+      background-color: v.$naranja;
+      padding: 1rem 4rem;
+      border-radius: 2rem;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$azul;
+      }
+    }
+  }
+}
+
+.contenedor-productos {
+  .producto {
+    transition: transform .3s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+
+.masInformacion {
+  display: none;
+  position: absolute;
+
+  &-contenedor {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    z-index: 1000;
+    @include m.flex-column;
+
+    .contenido {
+      background-color: v.$blanco;
+      padding: 2rem;
+      border-radius: 1rem;
+
+      @include m.contenedor;
+      @include m.flex-column;
+
+      p {
+        margin: 0;
+      }
+
+      img {
+        width: auto;
+        max-height: 40rem;
+      }
+    }
+  }
+}

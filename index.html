@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carpinteria Beto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/build/css/app.css">
+  <script src="src/js/app.js"></script>
+</head>
+<body>
+  <header class="header"><!-- Header con menu de navegacion -->
+    <div class="contenedor contenido-header"> 
+
+      <div class="logo">
+        <!-- <img src="src/logo/logo.png" alt="logo"> -->
+        <h2>Carpinteria Beto</h2>
+      </div>
+
+      <nav class="navegacion-principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#cobertura">Cobertura</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="video" id="inicio"> <!-- Seccion de video -->
+
+    <div class="overlay">
+      <div class="contenedor contenido-video">
+        <h1>Carpinteria Beto</h1>
+        <p>Cruztitla, San Sebastián Tlacotepec, Puebla</p>
+      </div>
+    </div>
+
+    <video autoplay muted loop>
+      <source src="video/carpinteria.mp4" type="video/mp4"/>
+      <source src="video/carpinteria.webm" type="video/webm"/>
+    </video>
+
+  </div>
+
+
+  <section class="nosotros">
+    <div class="nosotros-imagen">
+      <img src="src/img/carpinteria.JPG" alt="nosotros">
+    </div>
+    <div class="nosotros-contenido">
+      <h2>Sobre carpinteria Beto</h2>
+    <p>Somos un equipo comprometido con la mejora continua, enfocado en ofrecer soluciones integrales para nuestro mercado. Desde 2016, nos hemos posicionado gracias a la calidad, puntualidad y trabajo en equipo, construyendo relaciones sólidas con nuestros clientes. Somos tu mejor opción y aliado estratégico.</p>
+    </div>
+  </section>
+
+  <section id="productos" class="productos">
+    <h2>Productos</h2>
+
+    <div class="productos-contenedor">
+
+      <div class="producto" id="producto">
+        <img src="src/img/mobiliario.jpg" alt="mobiliario">
+        <p>Mobiliario casa habitacion</p>
+        <a href="src/pages/mobiliario.html">Ver productos</a>
+      </div>
+
+      <div class="producto">
+        <img src="src/img/puertas.jpg"  alt="puertas">
+        <p>Puertas de madera</p>
+        <a href="src/pages/solera.html">Ver productos</a>
+      </div>
+
+      <div class="producto">
+        <img src="src/img/ventanas.jpg"  alt="ventanas">
+        <p>Ventanas de madera</p>
+        <a href="src/pages/ventanas.html">Ver productos</a>
+      </div>
+
+      <div class="producto">
+        <img src="src/img/herramientas.jpg" alt="herramientas">
+        <p>Herramientas generales</p>
+        <a href="src/pages/bases.html">Ver productos</a>
+      </div>
+
+    </div>
+
+  </section> <!-- Linea de productos -->
+
+  <section id="cobertura" class="cobertura">
+    <div class="cobertura-header">
+      <img src="src/img/ubicacion.png" alt="cobertura">
+      <div class="cobertura-informacion">
+        <h2>Cobertura y entrega</h2>
+        <p>Entregamos nuestros productos a través de nuestros distribuidores en los municipios de Baja California Sur.
+          Encuentra el producto que necesitas en nuestro sitio web, envía tu comprobante de pago junto con tu orden de compra por WhatsApp o correo electrónico, y recibe tu pedido.
+        </p>
+        <span>*Consulta las restricciones de entrega y disponibilidad según tu solicitud.</span>
+      </div>
+    </div>
+    <div class="cobertura-footer">
+      <ul>
+        <li>Loreto</li>
+        <li>Ciudad Insurgentes</li>
+        <li>La Paz</li>
+        <li>Todo Santos</li>
+        <li>Cabo San Lucas</li>
+        <li>San Jose del Cabo</li>
+      </ul>
+    </div>
+  </section><!-- Cobertura -->
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://wa.me/+522381400875">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.5">
+          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+          <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+        </svg>
+      </a>
+    </div>
+    <p>Todos los derechos reservados, Carpinteria Beto 2026</p>
+  </footer> <!-- Pie de pagina -->
+  <script src="/build/js/app.js"></script>
+</body>
+</html>
