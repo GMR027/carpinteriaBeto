@@ -19,15 +19,15 @@ export function css(done) {
   done()
 }
 
-export function dev() {
-  watch('src/scss/**/*.scss', css)
-  watch('src/js/**/*.js', js)
-}
+// export function dev() {
+//   watch('src/scss/**/*.scss', css)
+//   watch('src/js/**/*.js', js)
+// }
 
 export function build(done) {
   js(done)
   css(done)
-  dev(done)
+  // dev(done)
 }
 
 //export default series(js, css, dev);
