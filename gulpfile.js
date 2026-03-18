@@ -25,11 +25,10 @@ export function dev() {
 }
 
 export function build(done) {
-  // Run tasks once and end (no watch), so CI/CD builds can finish.
   js(done)
   css(done)
-  done()
+  dev(done)
 }
 
-export default series(js, css);
-// For local development, run: `gulp dev` to enable watch mode.
+//export default series(js, css, dev);
+export default build;
